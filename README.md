@@ -1,10 +1,14 @@
-## Bilinen Hatalar
+# Bilinen Hatalar
 
 Detay API endpointi tüm code'lar için aynı değeri dönmektedir.
 
-# Welcome to Remix!
+## Mimari
 
-- [Remix Docs](https://remix.run/docs)
+API çağrılarının yapıldığı Service, Service'den alınan dataların işlendiği Controller ve datanın kullanıcıya gösterildiği View katmanlarının haberleştiği katmanlı bir mimari kullanılmıştır.
+
+## Pagination
+
+Pagination yapılırken çekilen sayfalar saklanmış ve bir daha aynı sayfaya dönüşte cache'ten okunması sağlanmıştır.
 
 ## Development
 
