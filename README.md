@@ -1,4 +1,4 @@
-# Bilinen Hatalar
+## Bilinen Hatalar
 
 Detay API endpointi tüm code'lar için aynı değeri dönmektedir.
 
@@ -10,7 +10,7 @@ API çağrılarının yapıldığı Service, Service'den alınan dataların işl
 
 Pagination yapılırken çekilen sayfalar saklanmış ve bir daha aynı sayfaya dönüşte cache'ten okunması sağlanmıştır.
 
-## Development
+# Development
 
 From your terminal:
 
@@ -20,7 +20,7 @@ npm run dev
 
 This starts your app in development mode, rebuilding assets on file changes.
 
-## Deployment
+# Deployment
 
 First, build your app for production:
 
