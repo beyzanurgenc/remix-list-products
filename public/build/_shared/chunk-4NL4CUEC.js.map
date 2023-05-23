@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../app/utils/constants/uiConstants.js"],
-  "sourcesContent": ["const MAIN_PAGE = Object.freeze({\n    FREE_SHIPPING: '\u00DCcretsiz kargo',\n    PAID_SHIPPING: 'Kargo \u00FCcretli',\n    FOLLOWERS: 'takip',\n    UPDATE: \"Son G\u00FCncelleme: \"\n});\n\nconst ERROR_PAGE = Object.freeze({\n    HEADER: '\u00DCzg\u00FCn\u00FCz!',\n    USER_MESSAGE: '\u00DCzg\u00FCn\u00FCz, b\u00F6yle bir sayfa bulunamad\u0131!'\n});\n\nconst uiConstants = {\n    MAIN_PAGE,\n    ERROR_PAGE\n};\n\nexport default uiConstants;"],
-  "mappings": ";;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAAM,YAAY,OAAO,OAAO;AAAA,EAC5B,eAAe;AAAA,EACf,eAAe;AAAA,EACf,WAAW;AAAA,EACX,QAAQ;AACZ,CAAC;AAED,IAAM,aAAa,OAAO,OAAO;AAAA,EAC7B,QAAQ;AAAA,EACR,cAAc;AAClB,CAAC;AAED,IAAM,cAAc;AAAA,EAChB;AAAA,EACA;AACJ;AAEA,IAAO,sBAAQ;",
-  "names": []
-}
