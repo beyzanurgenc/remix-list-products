@@ -6,7 +6,7 @@ import {
   init_filename,
   init_global,
   init_process
-} from "/build/_shared/chunk-SX4H5FZ7.js";
+} from "/build/_shared/chunk-NJHW5TWT.js";
 
 // app/controllers/productController.js
 init_global();
@@ -2433,23 +2433,6 @@ var ProductController = {
 };
 var productController_default = ProductController;
 
-// app/utils/constants/uiConstants.js
-init_global();
-init_dirname();
-init_filename();
-init_buffer();
-init_process();
-var MAIN_PAGE = Object.freeze({
-  FREE_SHIPPING: "\xDCcretsiz kargo",
-  PAID_SHIPPING: "Kargo \xFCcretli",
-  FOLLOWERS: "takip",
-  UPDATE: "Son G\xFCncelleme: "
-});
-var uiConstants = {
-  MAIN_PAGE
-};
-var uiConstants_default = uiConstants;
-
 // app/utils/helpers/builder.js
 init_global();
 init_dirname();
@@ -2464,9 +2447,8 @@ var buildRating = (rating) => {
 };
 
 export {
-  uiConstants_default,
   buildPriceLabel,
   buildRating,
   productController_default
 };
-//# sourceMappingURL=/build/_shared/chunk-LBX3RPEH.js.map
+//# sourceMappingURL=/build/_shared/chunk-76JU5YBX.js.map

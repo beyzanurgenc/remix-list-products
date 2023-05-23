@@ -34,11 +34,16 @@ body {
     margin-bottom: 10px;
 }
 
-.slider-button {
+.back-button,
+.direction-button {
     border: none;
     background: none;
-    font-size: 24px;
+    font-size: 40px;
     cursor: pointer;
+}
+
+.back-button {
+    font-size: 70px;
 }
 
 .slider-dots {
@@ -52,7 +57,7 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: rgb(229, 229, 229);
     margin: 0 5px;
     cursor: pointer;
 }

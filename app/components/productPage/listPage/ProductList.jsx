@@ -1,11 +1,11 @@
 import HorizontalProductList from "./HorizontalProductList";
 import VerticalProductList from "./VerticalProductList";
 
-const ProductList = ({ products }) => {
+const ProductList = ({ result }) => {
     return (
         <div className="app">
-            <HorizontalProductList products={products.horizontalProducts} />
-            <VerticalProductList products={products} />
+            <HorizontalProductList products={result.horizontalProducts} />
+            <VerticalProductList result={result} />
         </div>
     );
 };

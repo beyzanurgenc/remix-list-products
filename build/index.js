@@ -12126,7 +12126,7 @@ var require_react_router_development = __commonJS({
       function useIsomorphicLayoutEffect(cb) {
         React__namespace.useContext(NavigationContext).static || React__namespace.useLayoutEffect(cb);
       }
-      function useNavigate3() {
+      function useNavigate4() {
         let {
           isDataRoute
         } = React__namespace.useContext(RouteContext);
@@ -12384,7 +12384,7 @@ var require_react_router_development = __commonJS({
       function useRouteId() {
         return useCurrentRouteId(DataRouterStateHook.UseRouteId);
       }
-      function useNavigation() {
+      function useNavigation2() {
         return useDataRouterState(DataRouterStateHook.UseNavigation).navigation;
       }
       function useRevalidator() {
@@ -12551,7 +12551,7 @@ var require_react_router_development = __commonJS({
           matches
         } = React__namespace.useContext(RouteContext), {
           pathname: locationPathname
-        } = useLocation(), navigate = useNavigate3(), path = router.resolveTo(to, router.UNSAFE_getPathContributingMatches(matches).map((match) => match.pathnameBase), locationPathname, relative === "path"), jsonPath = JSON.stringify(path);
+        } = useLocation(), navigate = useNavigate4(), path = router.resolveTo(to, router.UNSAFE_getPathContributingMatches(matches).map((match) => match.pathnameBase), locationPathname, relative === "path"), jsonPath = JSON.stringify(path);
         return React__namespace.useEffect(() => navigate(JSON.parse(jsonPath), {
           replace,
           state,
@@ -12819,7 +12819,7 @@ var require_react_router_development = __commonJS({
         get: function() {
           return router.resolvePath;
         }
-      }), exports2.Await = Await, exports2.MemoryRouter = MemoryRouter, exports2.Navigate = Navigate, exports2.Outlet = Outlet2, exports2.Route = Route, exports2.Router = Router, exports2.RouterProvider = RouterProvider, exports2.Routes = Routes, exports2.UNSAFE_DataRouterContext = DataRouterContext, exports2.UNSAFE_DataRouterStateContext = DataRouterStateContext, exports2.UNSAFE_LocationContext = LocationContext, exports2.UNSAFE_NavigationContext = NavigationContext, exports2.UNSAFE_RouteContext = RouteContext, exports2.UNSAFE_mapRouteProperties = mapRouteProperties, exports2.UNSAFE_useRouteId = useRouteId, exports2.UNSAFE_useRoutesImpl = useRoutesImpl, exports2.createMemoryRouter = createMemoryRouter, exports2.createRoutesFromChildren = createRoutesFromChildren, exports2.createRoutesFromElements = createRoutesFromChildren, exports2.renderMatches = renderMatches, exports2.unstable_useBlocker = useBlocker, exports2.useActionData = useActionData, exports2.useAsyncError = useAsyncError, exports2.useAsyncValue = useAsyncValue, exports2.useHref = useHref, exports2.useInRouterContext = useInRouterContext, exports2.useLoaderData = useLoaderData3, exports2.useLocation = useLocation, exports2.useMatch = useMatch, exports2.useMatches = useMatches, exports2.useNavigate = useNavigate3, exports2.useNavigation = useNavigation, exports2.useNavigationType = useNavigationType, exports2.useOutlet = useOutlet, exports2.useOutletContext = useOutletContext, exports2.useParams = useParams, exports2.useResolvedPath = useResolvedPath, exports2.useRevalidator = useRevalidator, exports2.useRouteError = useRouteError, exports2.useRouteLoaderData = useRouteLoaderData, exports2.useRoutes = useRoutes, Object.defineProperty(exports2, "__esModule", { value: !0 });
+      }), exports2.Await = Await, exports2.MemoryRouter = MemoryRouter, exports2.Navigate = Navigate, exports2.Outlet = Outlet2, exports2.Route = Route, exports2.Router = Router, exports2.RouterProvider = RouterProvider, exports2.Routes = Routes, exports2.UNSAFE_DataRouterContext = DataRouterContext, exports2.UNSAFE_DataRouterStateContext = DataRouterStateContext, exports2.UNSAFE_LocationContext = LocationContext, exports2.UNSAFE_NavigationContext = NavigationContext, exports2.UNSAFE_RouteContext = RouteContext, exports2.UNSAFE_mapRouteProperties = mapRouteProperties, exports2.UNSAFE_useRouteId = useRouteId, exports2.UNSAFE_useRoutesImpl = useRoutesImpl, exports2.createMemoryRouter = createMemoryRouter, exports2.createRoutesFromChildren = createRoutesFromChildren, exports2.createRoutesFromElements = createRoutesFromChildren, exports2.renderMatches = renderMatches, exports2.unstable_useBlocker = useBlocker, exports2.useActionData = useActionData, exports2.useAsyncError = useAsyncError, exports2.useAsyncValue = useAsyncValue, exports2.useHref = useHref, exports2.useInRouterContext = useInRouterContext, exports2.useLoaderData = useLoaderData3, exports2.useLocation = useLocation, exports2.useMatch = useMatch, exports2.useMatches = useMatches, exports2.useNavigate = useNavigate4, exports2.useNavigation = useNavigation2, exports2.useNavigationType = useNavigationType, exports2.useOutlet = useOutlet, exports2.useOutletContext = useOutletContext, exports2.useParams = useParams, exports2.useResolvedPath = useResolvedPath, exports2.useRevalidator = useRevalidator, exports2.useRouteError = useRouteError, exports2.useRouteLoaderData = useRouteLoaderData, exports2.useRoutes = useRoutes, Object.defineProperty(exports2, "__esModule", { value: !0 });
     });
   }
 });
@@ -13784,7 +13784,7 @@ var require_errorBoundaries = __commonJS({
       }
     }
     var RemixCatchContext = /* @__PURE__ */ React__default.default.createContext(void 0);
-    function useCatch2() {
+    function useCatch() {
       return React.useContext(RemixCatchContext);
     }
     function RemixCatchBoundary({
@@ -13797,7 +13797,7 @@ var require_errorBoundaries = __commonJS({
       }, /* @__PURE__ */ React__default.default.createElement(Component, null)) : /* @__PURE__ */ React__default.default.createElement(React__default.default.Fragment, null, children);
     }
     function RemixRootDefaultCatchBoundary() {
-      let caught = useCatch2();
+      let caught = useCatch();
       return /* @__PURE__ */ React__default.default.createElement(RemixRootDefaultCatchBoundaryImpl, {
         caught
       });
@@ -13832,7 +13832,7 @@ var require_errorBoundaries = __commonJS({
     exports.RemixRootDefaultCatchBoundary = RemixRootDefaultCatchBoundary;
     exports.RemixRootDefaultErrorBoundary = RemixRootDefaultErrorBoundary;
     exports.V2_RemixRootDefaultErrorBoundary = V2_RemixRootDefaultErrorBoundary;
-    exports.useCatch = useCatch2;
+    exports.useCatch = useCatch;
   }
 });
 
@@ -23529,7 +23529,7 @@ var require_react_jsx_dev_runtime_development = __commonJS({
           value: source
         }), Object.freeze && (Object.freeze(element.props), Object.freeze(element)), element;
       };
-      function jsxDEV11(type, config, maybeKey, source, self2) {
+      function jsxDEV14(type, config, maybeKey, source, self2) {
         {
           var propName, props = {}, key = null, ref = null;
           maybeKey !== void 0 && (checkKeyStringCoercion(maybeKey), key = "" + maybeKey), hasValidKey(config) && (checkKeyStringCoercion(config.key), key = "" + config.key), hasValidRef(config) && (ref = config.ref, warnIfStringRefCannotBeAutoConverted(config, self2));
@@ -23676,7 +23676,7 @@ Check the top-level render call using <` + parentName + ">.");
             var typeString;
             type === null ? typeString = "null" : isArray2(type) ? typeString = "array" : type !== void 0 && type.$$typeof === REACT_ELEMENT_TYPE ? (typeString = "<" + (getComponentNameFromType(type.type) || "Unknown") + " />", info = " Did you accidentally export a JSX literal instead of a component?") : typeString = typeof type, error("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info);
           }
-          var element = jsxDEV11(type, props, key, source, self2);
+          var element = jsxDEV14(type, props, key, source, self2);
           if (element == null)
             return element;
           if (validType) {
@@ -34150,16 +34150,52 @@ __export(root_exports, {
   default: () => Root,
   links: () => links
 });
-var import_react2 = __toESM(require_dist3());
+var import_react3 = __toESM(require_dist3());
 
 // node_modules/bootstrap/dist/css/bootstrap.min.css
 var bootstrap_min_default = "/build/_assets/bootstrap.min-255VSQKL.css";
 
+// app/components/common/GlobalLoading.jsx
+var import_react2 = __toESM(require_dist3()), import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime()), GlobalLoading = ({ children }) => {
+  let { state } = (0, import_react2.useNavigation)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_jsx_dev_runtime2.Fragment, { children: state === "loading" ? /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "spinner h-100 d-flex align-items-center justify-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { class: "spinner-border", role: "status", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("span", { class: "visually-hidden", children: "Loading..." }, void 0, !1, {
+    fileName: "app/components/common/GlobalLoading.jsx",
+    lineNumber: 13,
+    columnNumber: 29
+  }, this) }, void 0, !1, {
+    fileName: "app/components/common/GlobalLoading.jsx",
+    lineNumber: 12,
+    columnNumber: 25
+  }, this) }, void 0, !1, {
+    fileName: "app/components/common/GlobalLoading.jsx",
+    lineNumber: 10,
+    columnNumber: 21
+  }, this) : children }, void 0, !1, {
+    fileName: "app/components/common/GlobalLoading.jsx",
+    lineNumber: 7,
+    columnNumber: 9
+  }, this);
+}, GlobalLoading_default = GlobalLoading;
+
 // app/components/style/app.css
-var app_default = "/build/_assets/app-SFMDOKJZ.css";
+var app_default = "/build/_assets/app-MNL6L3OV.css";
+
+// app/utils/constants/uiConstants.js
+var MAIN_PAGE = Object.freeze({
+  FREE_SHIPPING: "\xDCcretsiz kargo",
+  PAID_SHIPPING: "Kargo \xFCcretli",
+  FOLLOWERS: "takip",
+  UPDATE: "Son G\xFCncelleme: "
+}), ERROR_PAGE = Object.freeze({
+  HEADER: "\xDCzg\xFCn\xFCz!",
+  USER_MESSAGE: "\xDCzg\xFCn\xFCz, b\xF6yle bir sayfa bulunamad\u0131!"
+}), uiConstants = {
+  MAIN_PAGE,
+  ERROR_PAGE
+}, uiConstants_default = uiConstants;
 
 // app/root.jsx
-var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime()), links = () => [
+var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime()), links = () => [
   {
     rel: "stylesheet",
     href: app_default
@@ -34170,97 +34206,101 @@ var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime()), links = () => 
   }
 ];
 function Root() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("html", { lang: "en", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("head", { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Links, {}, void 0, !1, {
-        fileName: "app/root.jsx",
-        lineNumber: 29,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Meta, {}, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("html", { lang: "en", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("head", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("title", { children: "Case Study" }, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 30,
         columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Links, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 31,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Meta, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 32,
+        columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.jsx",
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("body", { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Outlet, {}, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("body", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(GlobalLoading_default, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Outlet, {}, void 0, !1, {
         fileName: "app/root.jsx",
-        lineNumber: 33,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.ScrollRestoration, {}, void 0, !1, {
-        fileName: "app/root.jsx",
-        lineNumber: 34,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Scripts, {}, void 0, !1, {
+        lineNumber: 36,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 35,
         columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.ScrollRestoration, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 38,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Scripts, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 39,
+        columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.jsx",
-      lineNumber: 32,
+      lineNumber: 34,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.jsx",
-    lineNumber: 27,
+    lineNumber: 28,
     columnNumber: 5
   }, this);
 }
 function CatchBoundary() {
-  let caught = (0, import_react2.useCatch)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("html", { children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("head", { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("title", { children: "\xDCzg\xFCn\xFCz!" }, void 0, !1, {
-        fileName: "app/root.jsx",
-        lineNumber: 47,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Meta, {}, void 0, !1, {
-        fileName: "app/root.jsx",
-        lineNumber: 48,
-        columnNumber: 9
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Links, {}, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("html", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("head", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("title", { children: uiConstants_default.ERROR_PAGE.HEADER }, void 0, !1, {
         fileName: "app/root.jsx",
         lineNumber: 49,
         columnNumber: 9
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/root.jsx",
-      lineNumber: 46,
-      columnNumber: 7
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("body", { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("h1", { children: [
-        caught.status,
-        " ",
-        caught.statusText
-      ] }, void 0, !0, {
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Meta, {}, void 0, !1, {
         fileName: "app/root.jsx",
-        lineNumber: 52,
+        lineNumber: 50,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Scripts, {}, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Links, {}, void 0, !1, {
         fileName: "app/root.jsx",
-        lineNumber: 55,
+        lineNumber: 51,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/root.jsx",
-      lineNumber: 51,
+      lineNumber: 48,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("body", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: uiConstants_default.ERROR_PAGE.USER_MESSAGE }, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 54,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Scripts, {}, void 0, !1, {
+        fileName: "app/root.jsx",
+        lineNumber: 57,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/root.jsx",
+      lineNumber: 53,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/root.jsx",
-    lineNumber: 45,
+    lineNumber: 47,
     columnNumber: 5
   }, this);
 }
@@ -34271,107 +34311,124 @@ __export(products_productId_exports, {
   default: () => Product,
   loader: () => loader
 });
-var import_react3 = __toESM(require_dist3());
+var import_react5 = __toESM(require_dist3());
 
-// app/utils/constants/uiConstants.js
-var MAIN_PAGE = Object.freeze({
-  FREE_SHIPPING: "\xDCcretsiz kargo",
-  PAID_SHIPPING: "Kargo \xFCcretli",
-  FOLLOWERS: "takip",
-  UPDATE: "Son G\xFCncelleme: "
-}), uiConstants = {
-  MAIN_PAGE
-}, uiConstants_default = uiConstants;
+// app/components/common/HistoyBackButton.jsx
+var import_react4 = __toESM(require_dist3()), import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime()), HistoyBackButton = () => {
+  let navigate = (0, import_react4.useNavigate)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "back-button", onClick: () => {
+    navigate(-1);
+  }, children: " \u2190 " }, void 0, !1, {
+    fileName: "app/components/common/HistoyBackButton.jsx",
+    lineNumber: 12,
+    columnNumber: 9
+  }, this);
+}, HistoyBackButton_default = HistoyBackButton;
 
 // app/utils/helpers/builder.js
 var buildPriceLabel = (price) => price ? price % 1 === 0 ? price + ".00\u20BA" : price + "\u20BA" : null, buildRating = (rating) => rating ? rating / 2 : 0;
 
 // app/components/productPage/detailPage/ProductDetail.jsx
-var import_jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime()), ProductDetail = ({ product }) => /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "container", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "row", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "col-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "main-img", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("img", { className: "img-fluid", src: product.imageUrl, alt: "product" }, void 0, !1, {
-    fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-    lineNumber: 12,
-    columnNumber: 25
-  }, this) }, void 0, !1, {
-    fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-    lineNumber: 11,
-    columnNumber: 21
-  }, this) }, void 0, !1, {
-    fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-    lineNumber: 10,
-    columnNumber: 17
-  }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "col-7", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "main-description px-2", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "category-name text-bold", children: product.mkName }, void 0, !1, {
+var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime()), ProductDetail = ({ product }) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "container", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "row", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "col-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "main-img", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("img", { className: "img-fluid", src: product.imageUrl, alt: "product" }, void 0, !1, {
+      fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+      lineNumber: 13,
+      columnNumber: 25
+    }, this) }, void 0, !1, {
+      fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+      lineNumber: 12,
+      columnNumber: 21
+    }, this) }, void 0, !1, {
+      fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+      lineNumber: 11,
+      columnNumber: 17
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "col-7", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "main-description px-2", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "category-name text-bold", children: product.mkName }, void 0, !1, {
+          fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+          lineNumber: 18,
+          columnNumber: 25
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "product-title text-bold my-3", children: product.productName }, void 0, !1, {
+          fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+          lineNumber: 21,
+          columnNumber: 25
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "badge-section my-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "badge-label mb-0", children: product.badge }, void 0, !1, {
+          fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+          lineNumber: 25,
+          columnNumber: 29
+        }, this) }, void 0, !1, {
+          fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+          lineNumber: 24,
+          columnNumber: 25
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "text-secondary mb-1", children: product.rating }, void 0, !1, {
+          fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+          lineNumber: 29,
+          columnNumber: 25
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "buttons d-flex my-5", children: product.storageOptions.map((option) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("a", { href: "", className: "shadow btn m-0 me-2", children: option }, void 0, !1, {
+          fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+          lineNumber: 33,
+          columnNumber: 45
+        }, this)) }, void 0, !1, {
+          fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+          lineNumber: 30,
+          columnNumber: 25
+        }, this)
+      ] }, void 0, !0, {
         fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
         lineNumber: 17,
-        columnNumber: 25
+        columnNumber: 21
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "product-title text-bold my-3", children: product.productName }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "price-area my-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "price-label mb-1", children: buildPriceLabel(product.price) }, void 0, !1, {
         fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-        lineNumber: 20,
+        lineNumber: 39,
         columnNumber: 25
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "badge-section my-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "badge-label mb-0", children: product.badge }, void 0, !1, {
-        fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-        lineNumber: 24,
-        columnNumber: 29
       }, this) }, void 0, !1, {
         fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-        lineNumber: 23,
-        columnNumber: 25
+        lineNumber: 38,
+        columnNumber: 21
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "text-secondary mb-1", children: product.rating }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "shipping-label", children: product.freeShipping ? uiConstants_default.MAIN_PAGE.FREE_SHIPPING : uiConstants_default.MAIN_PAGE.PAID_SHIPPING }, void 0, !1, {
         fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-        lineNumber: 28,
-        columnNumber: 25
+        lineNumber: 41,
+        columnNumber: 21
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "buttons d-flex my-5", children: product.storageOptions.map((option) => /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("a", { href: "#" + option, className: "shadow btn m-0 me-2", children: option }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "text-secondary", children: product.lastUpdate ? uiConstants_default.MAIN_PAGE.UPDATE + product.lastUpdate : "" }, void 0, !1, {
         fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-        lineNumber: 32,
-        columnNumber: 45
-      }, this)) }, void 0, !1, {
-        fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-        lineNumber: 29,
-        columnNumber: 25
+        lineNumber: 42,
+        columnNumber: 21
       }, this)
     ] }, void 0, !0, {
       fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
       lineNumber: 16,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { className: "price-area my-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "price-label mb-1", children: buildPriceLabel(product.price) }, void 0, !1, {
-      fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-      lineNumber: 38,
-      columnNumber: 25
-    }, this) }, void 0, !1, {
-      fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-      lineNumber: 37,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "shipping-label", children: product.freeShipping ? uiConstants_default.MAIN_PAGE.FREE_SHIPPING : uiConstants_default.MAIN_PAGE.PAID_SHIPPING }, void 0, !1, {
-      fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-      lineNumber: 41,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("p", { className: "text-secondary", children: product.lastUpdate ? uiConstants_default.MAIN_PAGE.UPDATE + product.lastUpdate : "" }, void 0, !1, {
-      fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-      lineNumber: 42,
-      columnNumber: 21
+      columnNumber: 17
     }, this)
   ] }, void 0, !0, {
     fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-    lineNumber: 15,
+    lineNumber: 10,
+    columnNumber: 13
+  }, this),
+  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "row d-flex justify-content-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "col-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(HistoyBackButton_default, {}, void 0, !1, {
+    fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+    lineNumber: 47,
+    columnNumber: 21
+  }, this) }, void 0, !1, {
+    fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+    lineNumber: 46,
     columnNumber: 17
+  }, this) }, void 0, !1, {
+    fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
+    lineNumber: 45,
+    columnNumber: 13
   }, this)
 ] }, void 0, !0, {
   fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
   lineNumber: 9,
-  columnNumber: 13
-}, this) }, void 0, !1, {
-  fileName: "app/components/productPage/detailPage/ProductDetail.jsx",
-  lineNumber: 8,
   columnNumber: 9
 }, this), ProductDetail_default = ProductDetail;
 
@@ -36409,10 +36466,10 @@ var getProductsList = (url2) => new Promise((resolve, reject) => {
 }, productController_default = ProductController;
 
 // app/routes/products.$productId.jsx
-var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime());
+var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
 function Product() {
-  let loaderData = (0, import_react3.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_jsx_dev_runtime4.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ProductDetail_default, { product: loaderData }, void 0, !1, {
+  let loaderData = (0, import_react5.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_jsx_dev_runtime6.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(ProductDetail_default, { product: loaderData }, void 0, !1, {
     fileName: "app/routes/products.$productId.jsx",
     lineNumber: 11,
     columnNumber: 7
@@ -36436,22 +36493,22 @@ __export(index_exports, {
   default: () => Index,
   loader: () => loader2
 });
-var import_react9 = __toESM(require_dist3());
+var import_react10 = __toESM(require_dist3());
 
 // app/components/productPage/listPage/HorizontalProductList.jsx
-var import_react5 = __toESM(require_dist3());
+var import_react7 = __toESM(require_dist3());
 
 // app/components/common/Slider.jsx
-var import_react4 = __toESM(require_react());
+var import_react6 = __toESM(require_react());
 
 // app/components/common/CardView.jsx
-var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime()), CardView = ({ product, onClickCallback }) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "card card-view h-100 w-100", onClick: () => onClickCallback(product), children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "d-flex justify-content-end pe-3", children: buildRating(product.dropRatio) }, void 0, !1, {
+var import_jsx_dev_runtime7 = __toESM(require_jsx_dev_runtime()), CardView = ({ product, onClickCallback }) => /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { className: "card card-view h-100 w-100", onClick: () => onClickCallback(product), children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { className: "d-flex justify-content-end pe-3", children: buildRating(product.dropRatio) }, void 0, !1, {
     fileName: "app/components/common/CardView.jsx",
     lineNumber: 7,
     columnNumber: 13
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "p-3 d-flex justify-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(
+  /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { className: "p-3 d-flex justify-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(
     "img",
     {
       src: product.imageUrl,
@@ -36471,8 +36528,8 @@ var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime()), CardView = ({ 
     lineNumber: 11,
     columnNumber: 13
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "card-body", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "d-flex justify-content-start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "my-auto product-name-label", children: product.name }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { className: "card-body", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { className: "d-flex justify-content-start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("p", { className: "my-auto product-name-label", children: product.name }, void 0, !1, {
       fileName: "app/components/common/CardView.jsx",
       lineNumber: 18,
       columnNumber: 21
@@ -36481,12 +36538,12 @@ var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime()), CardView = ({ 
       lineNumber: 17,
       columnNumber: 17
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("hr", { className: "my-3" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("hr", { className: "my-3" }, void 0, !1, {
       fileName: "app/components/common/CardView.jsx",
       lineNumber: 20,
       columnNumber: 17
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "d-flex justify-content-between", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "price-label", children: buildPriceLabel(product.price) }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { className: "d-flex justify-content-between", children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("p", { className: "price-label", children: buildPriceLabel(product.price) }, void 0, !1, {
       fileName: "app/components/common/CardView.jsx",
       lineNumber: 22,
       columnNumber: 21
@@ -36495,7 +36552,7 @@ var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime()), CardView = ({ 
       lineNumber: 21,
       columnNumber: 17
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { className: "small text-muted", children: product.followCount ? product.followCount + " " + uiConstants_default.MAIN_PAGE.FOLLOWERS : null }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("p", { className: "small text-muted", children: product.followCount ? product.followCount + " " + uiConstants_default.MAIN_PAGE.FOLLOWERS : null }, void 0, !1, {
       fileName: "app/components/common/CardView.jsx",
       lineNumber: 24,
       columnNumber: 17
@@ -36512,21 +36569,21 @@ var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime()), CardView = ({ 
 }, this), CardView_default = CardView;
 
 // app/components/common/Slider.jsx
-var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime()), Slider = ({ products, onClickCallback }) => {
-  let [currentIndex, setCurrentIndex] = (0, import_react4.useState)(0), handlePrev = () => {
+var import_jsx_dev_runtime8 = __toESM(require_jsx_dev_runtime()), Slider = ({ products, onClickCallback }) => {
+  let [currentIndex, setCurrentIndex] = (0, import_react6.useState)(0), handlePrev = () => {
     setCurrentIndex(
-      (prevIndex) => prevIndex === 0 ? products.length - 2 : prevIndex - 2
+      (prevIndex) => prevIndex === 0 ? products.length - 1 : prevIndex - 1
     );
   }, handleNext = () => {
     setCurrentIndex(
-      (prevIndex) => prevIndex === products.length - 2 ? 0 : prevIndex + 2
+      (prevIndex) => prevIndex === products.length - 1 ? 0 : prevIndex + 1
     );
   }, handleDotClick = (index) => {
-    setCurrentIndex(index * 2);
+    setCurrentIndex(index);
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "h-100", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "slider d-flex justify-content-center w-100", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("button", { className: "slider-button", onClick: handlePrev, children: "<" }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "h-100", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "slider d-flex justify-content-center w-100", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("button", { className: "direction-button", onClick: handlePrev, children: "<" }, void 0, !1, {
         fileName: "app/components/common/Slider.jsx",
         lineNumber: 27,
         columnNumber: 21
@@ -36535,7 +36592,7 @@ var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime()), Slider = ({ pr
         lineNumber: 26,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "slider-inner d-flex", children: products.slice(currentIndex, currentIndex + 2).map((product, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "col-6 px-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(CardView_default, { product, onClickCallback }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "slider-inner d-flex", children: products.slice(currentIndex, currentIndex + 1).map((product, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "col-6 px-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(CardView_default, { product, onClickCallback }, void 0, !1, {
         fileName: "app/components/common/Slider.jsx",
         lineNumber: 34,
         columnNumber: 29
@@ -36548,7 +36605,7 @@ var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime()), Slider = ({ pr
         lineNumber: 31,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("button", { className: "slider-button", onClick: handleNext, children: ">" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("button", { className: "direction-button", onClick: handleNext, children: ">" }, void 0, !1, {
         fileName: "app/components/common/Slider.jsx",
         lineNumber: 39,
         columnNumber: 21
@@ -36562,10 +36619,10 @@ var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime()), Slider = ({ pr
       lineNumber: 25,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "slider-dots", children: products.slice(currentIndex, currentIndex + 2).map((_, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "slider-dots", children: products.map((_, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
       "span",
       {
-        className: `slider-dot ${index * 2 === currentIndex ? "active" : ""}`,
+        className: `slider-dot ${index === currentIndex ? "active" : ""}`,
         onClick: () => handleDotClick(index)
       },
       index,
@@ -36589,11 +36646,11 @@ var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime()), Slider = ({ pr
 }, Slider_default = Slider;
 
 // app/components/productPage/listPage/HorizontalProductList.jsx
-var import_jsx_dev_runtime7 = __toESM(require_jsx_dev_runtime()), HorizontalProductList = ({ products }) => {
-  let navigate = (0, import_react5.useNavigate)(), onClickProduct = (product) => {
+var import_jsx_dev_runtime9 = __toESM(require_jsx_dev_runtime()), HorizontalProductList = ({ products }) => {
+  let navigate = (0, import_react7.useNavigate)(), onClickProduct = (product) => {
     navigate(`/products/${product.code}`);
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("div", { className: "horizontal-products", children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(Slider_default, { products, onClickCallback: (product) => {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "horizontal-products", children: /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(Slider_default, { products, onClickCallback: (product) => {
     onClickProduct(product);
   } }, void 0, !1, {
     fileName: "app/components/productPage/listPage/HorizontalProductList.jsx",
@@ -36607,10 +36664,57 @@ var import_jsx_dev_runtime7 = __toESM(require_jsx_dev_runtime()), HorizontalProd
 }, HorizontalProductList_default = HorizontalProductList;
 
 // app/components/productPage/listPage/VerticalProductList.jsx
-var import_react6 = __toESM(require_dist3()), import_react7 = __toESM(require_react()), import_react8 = __toESM(require_react());
+var import_react8 = __toESM(require_dist3()), import_react9 = __toESM(require_react());
+
+// app/components/common/PaginationButtons.jsx
+var import_jsx_dev_runtime10 = __toESM(require_jsx_dev_runtime()), PaginationButtons = ({
+  isPrevDisabled,
+  isNextDisabled,
+  onPreviousPageClickCallback,
+  onNextPageClickCallback
+}) => /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "d-flex justify-content-center m-auto pagination", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+    "button",
+    {
+      className: "direction-button px-3",
+      disabled: isPrevDisabled,
+      onClick: onPreviousPageClickCallback,
+      children: "<"
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/components/common/PaginationButtons.jsx",
+      lineNumber: 10,
+      columnNumber: 13
+    },
+    this
+  ),
+  /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
+    "button",
+    {
+      className: "direction-button px-3",
+      disabled: isNextDisabled,
+      onClick: onNextPageClickCallback,
+      children: ">"
+    },
+    void 0,
+    !1,
+    {
+      fileName: "app/components/common/PaginationButtons.jsx",
+      lineNumber: 17,
+      columnNumber: 13
+    },
+    this
+  )
+] }, void 0, !0, {
+  fileName: "app/components/common/PaginationButtons.jsx",
+  lineNumber: 9,
+  columnNumber: 9
+}, this), PaginationButtons_default = PaginationButtons;
 
 // app/utils/models/productPage.js
-var ProductPage = ({
+var ProductPageModel = ({
   pageNumber = "",
   productList = []
 }) => ({
@@ -36619,10 +36723,10 @@ var ProductPage = ({
 });
 
 // app/components/productPage/listPage/VerticalProductList.jsx
-var import_jsx_dev_runtime8 = __toESM(require_jsx_dev_runtime()), VerticalProductList = ({ products }) => {
-  let [nextPage, setNextPage] = (0, import_react8.useState)(products.nextUrl), [cachedProducts, setCachedProducts] = (0, import_react8.useState)([]), [currentPage, setCurrentPage] = (0, import_react8.useState)(1), navigate = (0, import_react6.useNavigate)(), [productPerPage, setProductPerPage] = (0, import_react8.useState)(products.products);
-  (0, import_react7.useEffect)(() => {
-    setCachedProducts([...cachedProducts, ProductPage({ pageNumber: currentPage, productList: productPerPage })]);
+var import_jsx_dev_runtime11 = __toESM(require_jsx_dev_runtime()), VerticalProductList = ({ result }) => {
+  let [nextPage, setNextPage] = (0, import_react9.useState)(result.nextUrl), [cachedProducts, setCachedProducts] = (0, import_react9.useState)([]), [currentPage, setCurrentPage] = (0, import_react9.useState)(1), navigate = (0, import_react8.useNavigate)(), [productPerPage, setProductPerPage] = (0, import_react9.useState)(result.products);
+  (0, import_react9.useEffect)(() => {
+    setCachedProducts([...cachedProducts, ProductPageModel({ pageNumber: currentPage, productList: productPerPage })]);
   }, []);
   let onClickProduct = (product) => {
     navigate(`/products/${product.code}`);
@@ -36630,18 +36734,28 @@ var import_jsx_dev_runtime8 = __toESM(require_jsx_dev_runtime()), VerticalProduc
     setCurrentPage(currentPage - 1), setProductPerPage(cachedProducts.find((productDetail) => productDetail.pageNumber === currentPage - 1).productList);
   }, onNextPageClick = () => {
     let cachedData = cachedProducts.find((productDetail) => productDetail.pageNumber === currentPage + 1);
-    cachedData ? (setCurrentPage(currentPage + 1), setProductPerPage(cachedData.productList)) : productController_default.getProductsList(nextPage).then((result) => {
-      setNextPage(result.nextPage), setProductPerPage(result.products), setCurrentPage(currentPage + 1), setCachedProducts([...cachedProducts, ProductPage({ pageNumber: currentPage + 1, productList: result.products })]);
+    cachedData ? (setCurrentPage(currentPage + 1), setProductPerPage(cachedData.productList)) : productController_default.getProductsList(nextPage).then((result2) => {
+      setNextPage(result2.nextPage), setProductPerPage(result2.products), setCurrentPage(currentPage + 1), setCachedProducts([...cachedProducts, ProductPageModel({ pageNumber: currentPage + 1, productList: result2.products })]);
     });
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "vertical-products", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "row col-6 m-auto", children: productPerPage.map((product, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "col-6 p-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(CardView_default, { product, onClickCallback: (product2) => {
-      onClickProduct(product2);
-    } }, void 0, !1, {
-      fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
-      lineNumber: 48,
-      columnNumber: 25
-    }, this) }, index, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "vertical-products", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "row col-6 m-auto", children: productPerPage.map((product, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("div", { className: "col-6 p-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+      CardView_default,
+      {
+        product,
+        onClickCallback: (product2) => {
+          onClickProduct(product2);
+        }
+      },
+      void 0,
+      !1,
+      {
+        fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
+        lineNumber: 48,
+        columnNumber: 25
+      },
+      this
+    ) }, index, !1, {
       fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
       lineNumber: 47,
       columnNumber: 21
@@ -36650,26 +36764,27 @@ var import_jsx_dev_runtime8 = __toESM(require_jsx_dev_runtime()), VerticalProduc
       lineNumber: 45,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "d-flex justify-content-center m-auto pagination", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("button", { className: "slider-button", disabled: currentPage === 1, onClick: () => {
-        onPreviousPageClick();
-      }, children: "<" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(
+      PaginationButtons_default,
+      {
+        isNextDisabled: !nextPage && currentPage === cachedProducts.length,
+        isPrevDisabled: currentPage === 1,
+        onPreviousPageClickCallback: () => {
+          onPreviousPageClick();
+        },
+        onNextPageClickCallback: () => {
+          onNextPageClick();
+        }
+      },
+      void 0,
+      !1,
+      {
         fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
-        lineNumber: 53,
-        columnNumber: 17
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("button", { className: "slider-button", onClick: () => {
-        onNextPageClick();
-      }, children: ">" }, void 0, !1, {
-        fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
-        lineNumber: 56,
-        columnNumber: 17
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
-      lineNumber: 52,
-      columnNumber: 13
-    }, this)
+        lineNumber: 54,
+        columnNumber: 13
+      },
+      this
+    )
   ] }, void 0, !0, {
     fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
     lineNumber: 44,
@@ -36678,13 +36793,13 @@ var import_jsx_dev_runtime8 = __toESM(require_jsx_dev_runtime()), VerticalProduc
 }, VerticalProductList_default = VerticalProductList;
 
 // app/components/productPage/listPage/ProductList.jsx
-var import_jsx_dev_runtime9 = __toESM(require_jsx_dev_runtime()), ProductList = ({ products }) => /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)("div", { className: "app", children: [
-  /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(HorizontalProductList_default, { products: products.horizontalProducts }, void 0, !1, {
+var import_jsx_dev_runtime12 = __toESM(require_jsx_dev_runtime()), ProductList = ({ result }) => /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "app", children: [
+  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(HorizontalProductList_default, { products: result.horizontalProducts }, void 0, !1, {
     fileName: "app/components/productPage/listPage/ProductList.jsx",
     lineNumber: 7,
     columnNumber: 13
   }, this),
-  /* @__PURE__ */ (0, import_jsx_dev_runtime9.jsxDEV)(VerticalProductList_default, { products }, void 0, !1, {
+  /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(VerticalProductList_default, { result }, void 0, !1, {
     fileName: "app/components/productPage/listPage/ProductList.jsx",
     lineNumber: 8,
     columnNumber: 13
@@ -36696,29 +36811,29 @@ var import_jsx_dev_runtime9 = __toESM(require_jsx_dev_runtime()), ProductList = 
 }, this), ProductList_default = ProductList;
 
 // app/routes/_index.jsx
-var import_jsx_dev_runtime10 = __toESM(require_jsx_dev_runtime());
+var import_jsx_dev_runtime13 = __toESM(require_jsx_dev_runtime()), initialApiUrl = "https://mocki.io/v1/59906f35-d5d5-40f7-8d44-53fd26eb3a05";
 function Index() {
-  let products = (0, import_react9.useLoaderData)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_jsx_dev_runtime10.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(ProductList_default, { products }, void 0, !1, {
+  let result = (0, import_react10.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(import_jsx_dev_runtime13.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(ProductList_default, { result }, void 0, !1, {
     fileName: "app/routes/_index.jsx",
-    lineNumber: 11,
+    lineNumber: 13,
     columnNumber: 7
   }, this) }, void 0, !1, {
     fileName: "app/routes/_index.jsx",
-    lineNumber: 10,
+    lineNumber: 12,
     columnNumber: 5
   }, this);
 }
 var loader2 = () => new Promise((resolve, reject) => {
-  productController_default.getProductsList("https://mocki.io/v1/59906f35-d5d5-40f7-8d44-53fd26eb3a05").then((products) => {
-    resolve(products);
+  productController_default.getProductsList(initialApiUrl).then((result) => {
+    resolve(result);
   }).catch(() => {
     reject(null);
   });
 });
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-6A6MSIB5.js", imports: ["/build/_shared/chunk-SX4H5FZ7.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MT3DOWMV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-3AZKUKWS.js", imports: ["/build/_shared/chunk-LBX3RPEH.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/products.$productId": { id: "routes/products.$productId", parentId: "root", path: "products/:productId", index: void 0, caseSensitive: void 0, module: "/build/routes/products.$productId-BPLGCOCF.js", imports: ["/build/_shared/chunk-LBX3RPEH.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, version: "2298445b", hmr: void 0, url: "/build/manifest-2298445B.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-XP7TCUKC.js", imports: ["/build/_shared/chunk-NJHW5TWT.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-XBDDPUDO.js", imports: ["/build/_shared/chunk-4NL4CUEC.js"], hasAction: !1, hasLoader: !1, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-JGHUUPMW.js", imports: ["/build/_shared/chunk-76JU5YBX.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/products.$productId": { id: "routes/products.$productId", parentId: "root", path: "products/:productId", index: void 0, caseSensitive: void 0, module: "/build/routes/products.$productId-6MBOMPVL.js", imports: ["/build/_shared/chunk-76JU5YBX.js"], hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, version: "ccbf30b7", hmr: void 0, url: "/build/manifest-CCBF30B7.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { unstable_dev: !1, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !1, v2_meta: !1, v2_normalizeFormMethod: !1, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_react_stream_exports }, routes = {

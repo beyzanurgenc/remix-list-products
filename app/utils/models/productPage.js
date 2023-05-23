@@ -1,4 +1,4 @@
-export const ProductPage = (
+export const ProductPageModel = (
     {
         pageNumber = "",
         productList = []

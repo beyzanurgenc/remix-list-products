@@ -3,11 +3,12 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
-  useCatch
+  ScrollRestoration
 } from "@remix-run/react";
 import bootstrapCSS from "bootstrap/dist/css/bootstrap.min.css";
+import GlobalLoading from "./components/common/GlobalLoading";
 import styles from "./components/style/app.css";
+import uiConstants from "./utils/constants/uiConstants";
 
 export const links = () => {
   return [
@@ -26,11 +27,14 @@ export default function Root() {
   return (
     <html lang="en">
       <head>
+        <title>Case Study</title>
         <Links />
         <Meta />
       </head>
       <body>
-        <Outlet />
+        <GlobalLoading>
+          <Outlet />
+        </GlobalLoading>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -39,18 +43,16 @@ export default function Root() {
 }
 
 export function CatchBoundary() {
-  const caught = useCatch();
-
   return (
     <html>
       <head>
-        <title>Üzgünüz!</title>
+        <title>{uiConstants.ERROR_PAGE.HEADER}</title>
         <Meta />
         <Links />
       </head>
       <body>
         <h1>
-          {caught.status} {caught.statusText}
+          {uiConstants.ERROR_PAGE.USER_MESSAGE}
         </h1>
         <Scripts />
       </body>

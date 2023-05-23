@@ -1,14 +1,21 @@
-import { useTransition } from "@remix-run/react";
-import React from 'react';
+import { useNavigation } from "@remix-run/react";
 
-
-const GlobalLoading = () => {
-    const transition = useTransition();
-    const active = transition.state !== "idle";
-
+const GlobalLoading = ({ children }) => {
+    const { state } = useNavigation();
 
     return (
-        <div className="spinner">{active ? "Loading..." : null}</div>
+        <>
+            {
+                state === "loading" ?
+                    <div className="spinner h-100 d-flex align-items-center justify-content-center">
+
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div> : children
+            }
+        </>
+
     );
 }
 

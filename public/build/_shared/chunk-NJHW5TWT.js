@@ -10296,8 +10296,8 @@ export {
   init_buffer2 as init_buffer,
   require_react,
   useNavigate,
+  useNavigation,
   Outlet,
-  useCatch,
   Links,
   Meta,
   Scripts,
@@ -10537,4 +10537,4 @@ react/cjs/react-jsx-dev-runtime.development.js:
    * @license MIT
    *)
 */
-//# sourceMappingURL=/build/_shared/chunk-SX4H5FZ7.js.map
+//# sourceMappingURL=/build/_shared/chunk-NJHW5TWT.js.map

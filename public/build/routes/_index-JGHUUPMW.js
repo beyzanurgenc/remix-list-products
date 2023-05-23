@@ -1,9 +1,11 @@
 import {
   buildPriceLabel,
   buildRating,
-  productController_default,
+  productController_default
+} from "/build/_shared/chunk-76JU5YBX.js";
+import {
   uiConstants_default
-} from "/build/_shared/chunk-LBX3RPEH.js";
+} from "/build/_shared/chunk-4NL4CUEC.js";
 import {
   __toESM,
   init_buffer,
@@ -15,7 +17,7 @@ import {
   require_react,
   useLoaderData,
   useNavigate
-} from "/build/_shared/chunk-SX4H5FZ7.js";
+} from "/build/_shared/chunk-NJHW5TWT.js";
 
 // browser-route-module:routes/_index.jsx?browser
 init_global();
@@ -135,20 +137,20 @@ var Slider = ({ products, onClickCallback }) => {
   const [currentIndex, setCurrentIndex] = (0, import_react.useState)(0);
   const handlePrev = () => {
     setCurrentIndex(
-      (prevIndex) => prevIndex === 0 ? products.length - 2 : prevIndex - 2
+      (prevIndex) => prevIndex === 0 ? products.length - 1 : prevIndex - 1
     );
   };
   const handleNext = () => {
     setCurrentIndex(
-      (prevIndex) => prevIndex === products.length - 2 ? 0 : prevIndex + 2
+      (prevIndex) => prevIndex === products.length - 1 ? 0 : prevIndex + 1
     );
   };
   const handleDotClick = (index) => {
-    setCurrentIndex(index * 2);
+    setCurrentIndex(index);
   };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "h-100", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider d-flex justify-content-center w-100", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("button", { className: "slider-button", onClick: handlePrev, children: "<" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("button", { className: "direction-button", onClick: handlePrev, children: "<" }, void 0, false, {
         fileName: "app/components/common/Slider.jsx",
         lineNumber: 27,
         columnNumber: 21
@@ -157,7 +159,7 @@ var Slider = ({ products, onClickCallback }) => {
         lineNumber: 26,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-inner d-flex", children: products.slice(currentIndex, currentIndex + 2).map((product, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "col-6 px-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(CardView_default, { product, onClickCallback }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-inner d-flex", children: products.slice(currentIndex, currentIndex + 1).map((product, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "col-6 px-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(CardView_default, { product, onClickCallback }, void 0, false, {
         fileName: "app/components/common/Slider.jsx",
         lineNumber: 34,
         columnNumber: 29
@@ -170,7 +172,7 @@ var Slider = ({ products, onClickCallback }) => {
         lineNumber: 31,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("button", { className: "slider-button", onClick: handleNext, children: ">" }, void 0, false, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("button", { className: "direction-button", onClick: handleNext, children: ">" }, void 0, false, {
         fileName: "app/components/common/Slider.jsx",
         lineNumber: 39,
         columnNumber: 21
@@ -184,10 +186,10 @@ var Slider = ({ products, onClickCallback }) => {
       lineNumber: 25,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-dots", children: products.slice(currentIndex, currentIndex + 2).map((_, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-dots", children: products.map((_, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(
       "span",
       {
-        className: `slider-dot ${index * 2 === currentIndex ? "active" : ""}`,
+        className: `slider-dot ${index === currentIndex ? "active" : ""}`,
         onClick: () => handleDotClick(index)
       },
       index,
@@ -239,7 +241,62 @@ init_filename();
 init_buffer();
 init_process();
 var import_react4 = __toESM(require_react());
-var import_react5 = __toESM(require_react());
+
+// app/components/common/PaginationButtons.jsx
+init_global();
+init_dirname();
+init_filename();
+init_buffer();
+init_process();
+var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime());
+var PaginationButtons = ({
+  isPrevDisabled,
+  isNextDisabled,
+  onPreviousPageClickCallback,
+  onNextPageClickCallback
+}) => {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "d-flex justify-content-center m-auto pagination", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+      "button",
+      {
+        className: "direction-button px-3",
+        disabled: isPrevDisabled,
+        onClick: onPreviousPageClickCallback,
+        children: "<"
+      },
+      void 0,
+      false,
+      {
+        fileName: "app/components/common/PaginationButtons.jsx",
+        lineNumber: 10,
+        columnNumber: 13
+      },
+      this
+    ),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+      "button",
+      {
+        className: "direction-button px-3",
+        disabled: isNextDisabled,
+        onClick: onNextPageClickCallback,
+        children: ">"
+      },
+      void 0,
+      false,
+      {
+        fileName: "app/components/common/PaginationButtons.jsx",
+        lineNumber: 17,
+        columnNumber: 13
+      },
+      this
+    )
+  ] }, void 0, true, {
+    fileName: "app/components/common/PaginationButtons.jsx",
+    lineNumber: 9,
+    columnNumber: 9
+  }, this);
+};
+var PaginationButtons_default = PaginationButtons;
 
 // app/utils/models/productPage.js
 init_global();
@@ -247,7 +304,7 @@ init_dirname();
 init_filename();
 init_buffer();
 init_process();
-var ProductPage = ({
+var ProductPageModel = ({
   pageNumber = "",
   productList = []
 }) => {
@@ -258,15 +315,15 @@ var ProductPage = ({
 };
 
 // app/components/productPage/listPage/VerticalProductList.jsx
-var import_jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime());
-var VerticalProductList = ({ products }) => {
-  const [nextPage, setNextPage] = (0, import_react5.useState)(products.nextUrl);
-  const [cachedProducts, setCachedProducts] = (0, import_react5.useState)([]);
-  const [currentPage, setCurrentPage] = (0, import_react5.useState)(1);
+var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime());
+var VerticalProductList = ({ result }) => {
+  const [nextPage, setNextPage] = (0, import_react4.useState)(result.nextUrl);
+  const [cachedProducts, setCachedProducts] = (0, import_react4.useState)([]);
+  const [currentPage, setCurrentPage] = (0, import_react4.useState)(1);
   const navigate = useNavigate();
-  const [productPerPage, setProductPerPage] = (0, import_react5.useState)(products.products);
+  const [productPerPage, setProductPerPage] = (0, import_react4.useState)(result.products);
   (0, import_react4.useEffect)(() => {
-    setCachedProducts([...cachedProducts, ProductPage({ pageNumber: currentPage, productList: productPerPage })]);
+    setCachedProducts([...cachedProducts, ProductPageModel({ pageNumber: currentPage, productList: productPerPage })]);
   }, []);
   const onClickProduct = (product) => {
     navigate(`/products/${product.code}`);
@@ -281,22 +338,32 @@ var VerticalProductList = ({ products }) => {
       setCurrentPage(currentPage + 1);
       setProductPerPage(cachedData.productList);
     } else {
-      productController_default.getProductsList(nextPage).then((result) => {
-        setNextPage(result.nextPage);
-        setProductPerPage(result.products);
+      productController_default.getProductsList(nextPage).then((result2) => {
+        setNextPage(result2.nextPage);
+        setProductPerPage(result2.products);
         setCurrentPage(currentPage + 1);
-        setCachedProducts([...cachedProducts, ProductPage({ pageNumber: currentPage + 1, productList: result.products })]);
+        setCachedProducts([...cachedProducts, ProductPageModel({ pageNumber: currentPage + 1, productList: result2.products })]);
       });
     }
   };
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "vertical-products", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "row col-6 m-auto", children: productPerPage.map((product, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "col-6 p-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(CardView_default, { product, onClickCallback: (product2) => {
-      onClickProduct(product2);
-    } }, void 0, false, {
-      fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
-      lineNumber: 48,
-      columnNumber: 25
-    }, this) }, index, false, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "vertical-products", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "row col-6 m-auto", children: productPerPage.map((product, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "col-6 p-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(
+      CardView_default,
+      {
+        product,
+        onClickCallback: (product2) => {
+          onClickProduct(product2);
+        }
+      },
+      void 0,
+      false,
+      {
+        fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
+        lineNumber: 48,
+        columnNumber: 25
+      },
+      this
+    ) }, index, false, {
       fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
       lineNumber: 47,
       columnNumber: 21
@@ -305,26 +372,27 @@ var VerticalProductList = ({ products }) => {
       lineNumber: 45,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "d-flex justify-content-center m-auto pagination", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "slider-button", disabled: currentPage === 1, onClick: () => {
-        onPreviousPageClick();
-      }, children: "<" }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(
+      PaginationButtons_default,
+      {
+        isNextDisabled: !nextPage && currentPage === cachedProducts.length,
+        isPrevDisabled: currentPage === 1,
+        onPreviousPageClickCallback: () => {
+          onPreviousPageClick();
+        },
+        onNextPageClickCallback: () => {
+          onNextPageClick();
+        }
+      },
+      void 0,
+      false,
+      {
         fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
-        lineNumber: 53,
-        columnNumber: 17
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "slider-button", onClick: () => {
-        onNextPageClick();
-      }, children: ">" }, void 0, false, {
-        fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
-        lineNumber: 56,
-        columnNumber: 17
-      }, this)
-    ] }, void 0, true, {
-      fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
-      lineNumber: 52,
-      columnNumber: 13
-    }, this)
+        lineNumber: 54,
+        columnNumber: 13
+      },
+      this
+    )
   ] }, void 0, true, {
     fileName: "app/components/productPage/listPage/VerticalProductList.jsx",
     lineNumber: 44,
@@ -334,15 +402,15 @@ var VerticalProductList = ({ products }) => {
 var VerticalProductList_default = VerticalProductList;
 
 // app/components/productPage/listPage/ProductList.jsx
-var import_jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime());
-var ProductList = ({ products }) => {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { className: "app", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(HorizontalProductList_default, { products: products.horizontalProducts }, void 0, false, {
+var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
+var ProductList = ({ result }) => {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { className: "app", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(HorizontalProductList_default, { products: result.horizontalProducts }, void 0, false, {
       fileName: "app/components/productPage/listPage/ProductList.jsx",
       lineNumber: 7,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(VerticalProductList_default, { products }, void 0, false, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(VerticalProductList_default, { result }, void 0, false, {
       fileName: "app/components/productPage/listPage/ProductList.jsx",
       lineNumber: 8,
       columnNumber: 13
@@ -356,20 +424,20 @@ var ProductList = ({ products }) => {
 var ProductList_default = ProductList;
 
 // app/routes/_index.jsx
-var import_jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime());
+var import_jsx_dev_runtime7 = __toESM(require_jsx_dev_runtime());
 function Index() {
-  const products = useLoaderData();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_jsx_dev_runtime6.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(ProductList_default, { products }, void 0, false, {
+  const result = useLoaderData();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_jsx_dev_runtime7.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(ProductList_default, { result }, void 0, false, {
     fileName: "app/routes/_index.jsx",
-    lineNumber: 11,
+    lineNumber: 13,
     columnNumber: 7
   }, this) }, void 0, false, {
     fileName: "app/routes/_index.jsx",
-    lineNumber: 10,
+    lineNumber: 12,
     columnNumber: 5
   }, this);
 }
 export {
   Index as default
 };
-//# sourceMappingURL=/build/routes/_index-3AZKUKWS.js.map
+//# sourceMappingURL=/build/routes/_index-JGHUUPMW.js.map

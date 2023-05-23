@@ -1,19 +1,19 @@
 import { useNavigate } from "@remix-run/react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CardView from "~/components/common/CardView";
+import PaginationButtons from "~/components/common/PaginationButtons";
 import ProductController from "~/controllers/productController";
-import { ProductPage } from "~/utils/models/productPage";
+import { ProductPageModel } from "~/utils/models/productPage";
 
-const VerticalProductList = ({ products }) => {
-    const [nextPage, setNextPage] = useState(products.nextUrl);
+const VerticalProductList = ({ result }) => {
+    const [nextPage, setNextPage] = useState(result.nextUrl);
     const [cachedProducts, setCachedProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const navigate = useNavigate();
-    const [productPerPage, setProductPerPage] = useState(products.products);
+    const [productPerPage, setProductPerPage] = useState(result.products);
 
     useEffect(() => {
-        setCachedProducts([...cachedProducts, ProductPage({ pageNumber: currentPage, productList: productPerPage })]);
+        setCachedProducts([...cachedProducts, ProductPageModel({ pageNumber: currentPage, productList: productPerPage })]);
     }, []);
 
     const onClickProduct = (product) => {
@@ -35,7 +35,7 @@ const VerticalProductList = ({ products }) => {
                 setNextPage(result.nextPage);
                 setProductPerPage(result.products);
                 setCurrentPage(currentPage + 1);
-                setCachedProducts([...cachedProducts, ProductPage({ pageNumber: currentPage + 1, productList: result.products })]);
+                setCachedProducts([...cachedProducts, ProductPageModel({ pageNumber: currentPage + 1, productList: result.products })]);
             });
         }
     };
@@ -45,18 +45,18 @@ const VerticalProductList = ({ products }) => {
             <div className="row col-6 m-auto">
                 {productPerPage.map((product, index) => (
                     <div className="col-6 p-4" key={index}>
-                        <CardView product={product} onClickCallback={(product) => { onClickProduct(product) }} />
+                        <CardView
+                            product={product}
+                            onClickCallback={(product) => { onClickProduct(product) }} />
                     </div>
                 ))}
             </div>
-            <div className="d-flex justify-content-center m-auto pagination">
-                <button className="slider-button" disabled={currentPage === 1} onClick={() => { onPreviousPageClick() }}>
-                    &lt;
-                </button>
-                <button className="slider-button" onClick={() => { onNextPageClick() }}>
-                    &gt;
-                </button>
-            </div>
+            <PaginationButtons
+                isNextDisabled={!nextPage && currentPage === cachedProducts.length}
+                isPrevDisabled={currentPage === 1}
+                onPreviousPageClickCallback={() => { onPreviousPageClick() }}
+                onNextPageClickCallback={() => { onNextPageClick() }}
+            />
         </div >
     );
 };

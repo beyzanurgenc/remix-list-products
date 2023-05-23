@@ -1,4 +1,5 @@
 
+import HistoyBackButton from '~/components/common/HistoyBackButton';
 import uiConstants from '~/utils/constants/uiConstants';
 import { buildPriceLabel } from '~/utils/helpers/builder';
 
@@ -29,7 +30,7 @@ const ProductDetail = ({ product }) => {
                         <div className="buttons d-flex my-5">
                             {
                                 product.storageOptions.map((option) => {
-                                    return (<a href={"#" + option} className="shadow btn m-0 me-2">{option}</a>)
+                                    return (<a href={""} className="shadow btn m-0 me-2">{option}</a>)
                                 })
                             }
                         </div>
@@ -37,9 +38,13 @@ const ProductDetail = ({ product }) => {
                     <div className="price-area my-4">
                         <p className="price-label mb-1">{buildPriceLabel(product.price)}</p>
                     </div>
-
                     <p className="shipping-label">{product.freeShipping ? uiConstants.MAIN_PAGE.FREE_SHIPPING : uiConstants.MAIN_PAGE.PAID_SHIPPING}</p>
                     <p className="text-secondary">{product.lastUpdate ? uiConstants.MAIN_PAGE.UPDATE + product.lastUpdate : ""}</p>
+                </div>
+            </div>
+            <div className='row d-flex justify-content-end'>
+                <div className='col-2'>
+                    <HistoyBackButton />
                 </div>
             </div>
         </div>
