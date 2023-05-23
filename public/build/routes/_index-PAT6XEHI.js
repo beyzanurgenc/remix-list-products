@@ -1,8 +1,7 @@
 import {
   buildPriceLabel,
-  buildRating,
   productController_default
-} from "/build/_shared/chunk-76JU5YBX.js";
+} from "/build/_shared/chunk-676T2SS4.js";
 import {
   uiConstants_default
 } from "/build/_shared/chunk-4NL4CUEC.js";
@@ -64,11 +63,6 @@ init_process();
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 var CardView = ({ product, onClickCallback }) => {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "card card-view h-100 w-100", onClick: () => onClickCallback(product), children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "d-flex justify-content-end pe-3", children: buildRating(product.dropRatio) }, void 0, false, {
-      fileName: "app/components/common/CardView.jsx",
-      lineNumber: 7,
-      columnNumber: 13
-    }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "p-3 d-flex justify-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(
       "img",
       {
@@ -80,17 +74,31 @@ var CardView = ({ product, onClickCallback }) => {
       false,
       {
         fileName: "app/components/common/CardView.jsx",
-        lineNumber: 12,
+        lineNumber: 8,
         columnNumber: 17
       },
       this
     ) }, void 0, false, {
       fileName: "app/components/common/CardView.jsx",
-      lineNumber: 11,
+      lineNumber: 7,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "card-body", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "d-flex justify-content-start", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "my-auto product-name-label", children: product.name }, void 0, false, {
+        fileName: "app/components/common/CardView.jsx",
+        lineNumber: 14,
+        columnNumber: 21
+      }, this) }, void 0, false, {
+        fileName: "app/components/common/CardView.jsx",
+        lineNumber: 13,
+        columnNumber: 17
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("hr", { className: "my-3" }, void 0, false, {
+        fileName: "app/components/common/CardView.jsx",
+        lineNumber: 16,
+        columnNumber: 17
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "d-flex justify-content-between", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "price-label", children: buildPriceLabel(product.price) }, void 0, false, {
         fileName: "app/components/common/CardView.jsx",
         lineNumber: 18,
         columnNumber: 21
@@ -99,28 +107,14 @@ var CardView = ({ product, onClickCallback }) => {
         lineNumber: 17,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("hr", { className: "my-3" }, void 0, false, {
-        fileName: "app/components/common/CardView.jsx",
-        lineNumber: 20,
-        columnNumber: 17
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", { className: "d-flex justify-content-between", children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "price-label", children: buildPriceLabel(product.price) }, void 0, false, {
-        fileName: "app/components/common/CardView.jsx",
-        lineNumber: 22,
-        columnNumber: 21
-      }, this) }, void 0, false, {
-        fileName: "app/components/common/CardView.jsx",
-        lineNumber: 21,
-        columnNumber: 17
-      }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("p", { className: "small text-muted", children: product.followCount ? product.followCount + " " + uiConstants_default.MAIN_PAGE.FOLLOWERS : null }, void 0, false, {
         fileName: "app/components/common/CardView.jsx",
-        lineNumber: 24,
+        lineNumber: 20,
         columnNumber: 17
       }, this)
     ] }, void 0, true, {
       fileName: "app/components/common/CardView.jsx",
-      lineNumber: 16,
+      lineNumber: 12,
       columnNumber: 13
     }, this)
   ] }, void 0, true, {
@@ -149,7 +143,7 @@ var Slider = ({ products, onClickCallback }) => {
     setCurrentIndex(index);
   };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "h-100", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider d-flex justify-content-center w-100", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider d-flex justify-content-center h-100 w-100", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", { className: "slider-controls", children: /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("button", { className: "direction-button", onClick: handlePrev, children: "<" }, void 0, false, {
         fileName: "app/components/common/Slider.jsx",
         lineNumber: 27,
@@ -440,4 +434,4 @@ function Index() {
 export {
   Index as default
 };
-//# sourceMappingURL=/build/routes/_index-JGHUUPMW.js.map
+//# sourceMappingURL=/build/routes/_index-PAT6XEHI.js.map

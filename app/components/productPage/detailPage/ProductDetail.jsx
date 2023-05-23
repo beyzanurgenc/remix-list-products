@@ -1,7 +1,8 @@
 
 import HistoyBackButton from '~/components/common/HistoyBackButton';
+import Ratings from '~/components/common/Rating';
 import uiConstants from '~/utils/constants/uiConstants';
-import { buildPriceLabel } from '~/utils/helpers/builder';
+import { buildPriceLabel, buildRating } from '~/utils/helpers/builder';
 
 const ProductDetail = ({ product }) => {
 
@@ -26,7 +27,7 @@ const ProductDetail = ({ product }) => {
                                 {product.badge}
                             </p>
                         </div>
-                        <p className="text-secondary mb-1">{product.rating}</p>
+                        <Ratings rating={buildRating(product.rating)} />
                         <div className="buttons d-flex my-5">
                             {
                                 product.storageOptions.map((option) => {

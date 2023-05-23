@@ -3,5 +3,5 @@ export const buildPriceLabel = (price) => {
 };
 
 export const buildRating = (rating) => {
-    return rating ? rating / 2 : 0;
+    return rating ? rating : 0;
 };

@@ -22,7 +22,7 @@ const Slider = ({ products, onClickCallback }) => {
 
     return (
         <div className='h-100'>
-            <div className="slider d-flex justify-content-center w-100">
+            <div className="slider d-flex justify-content-center h-100 w-100">
                 <div className="slider-controls">
                     <button className="direction-button" onClick={handlePrev}>
                         &lt;

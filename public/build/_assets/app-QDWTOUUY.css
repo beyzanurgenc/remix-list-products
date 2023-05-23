@@ -18,6 +18,8 @@ body {
 .card-view {
   border-radius: 5% !important;
   cursor: pointer;
+}
+.horizontal-products .card-view {
   min-width: 400px !important;
 }
 .slider {
@@ -78,4 +80,12 @@ body {
 }
 .shipping-label {
   color: green;
+}
+@media screen and (max-width: 850px) {
+  .card-view {
+    min-width: 180px !important;
+  }
+  .col-6 {
+    width: 60% !important;
+  }
 }

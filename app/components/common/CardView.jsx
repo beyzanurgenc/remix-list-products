@@ -1,13 +1,9 @@
 import uiConstants from "~/utils/constants/uiConstants";
-import { buildPriceLabel, buildRating } from "~/utils/helpers/builder";
+import { buildPriceLabel } from "~/utils/helpers/builder";
 
 const CardView = ({ product, onClickCallback }) => {
     return (
         <div className="card card-view h-100 w-100" onClick={() => onClickCallback(product)}>
-            <div className="d-flex justify-content-end pe-3">
-                {/* <Ratings rating={buildRating(product.dropRatio)} /> */}
-                {buildRating(product.dropRatio)}
-            </div>
             <div className="p-3 d-flex justify-content-center">
                 <img src={product.imageUrl}
                     className="img-fluid"

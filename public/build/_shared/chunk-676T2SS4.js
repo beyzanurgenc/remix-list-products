@@ -2443,7 +2443,7 @@ var buildPriceLabel = (price) => {
   return price ? price % 1 === 0 ? price + ".00\u20BA" : price + "\u20BA" : null;
 };
 var buildRating = (rating) => {
-  return rating ? rating / 2 : 0;
+  return rating ? rating : 0;
 };
 
 export {
@@ -2451,4 +2451,4 @@ export {
   buildRating,
   productController_default
 };
-//# sourceMappingURL=/build/_shared/chunk-76JU5YBX.js.map
+//# sourceMappingURL=/build/_shared/chunk-676T2SS4.js.map

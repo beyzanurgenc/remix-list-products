@@ -64,7 +64,7 @@ var GlobalLoading = ({ children }) => {
 var GlobalLoading_default = GlobalLoading;
 
 // app/components/style/app.css
-var app_default = "/build/_assets/app-MNL6L3OV.css";
+var app_default = "/build/_assets/app-QDWTOUUY.css";
 
 // app/root.jsx
 var import_jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime());
@@ -184,4 +184,4 @@ export {
   Root as default,
   links
 };
-//# sourceMappingURL=/build/root-XBDDPUDO.js.map
+//# sourceMappingURL=/build/root-UTNWELJI.js.map
